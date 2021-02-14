@@ -5,17 +5,28 @@ $secondary:black;
 $secondary-300:#3F3F3F;
 $secondary-200:#67686A;
 
+$xl:1200px;
+$lg:992px;
+$md:768px;
+$sm:576px;
+
 body {
     font-size: 18px;
     font-family: 'Roboto', sans-serif;
+    background:black;
+    color:white;
 }
 
 
 .top-header {
     background: black;
     height: 115px;
-    display: flex;
-    //justify-content: center;
+    @media(max-width:$md){
+        padding-top:30px;
+        padding-bottom:45px;
+        height:auto;
+    }
+    display: flex;    
     align-items: center;
     background-image:url(../img/header-top-bg.png);
     background-size: cover;
@@ -24,6 +35,29 @@ body {
     .top-header-contact {
         display:flex;
         justify-content: flex-end;
+        @media(max-width:$md){
+            justify-content: space-between;
+        }
+        .mobile-menu-dropdown {
+            display:none;
+            @media(max-width:$md){
+                display:block;
+            }
+            button {
+                color:white;
+                font-weight: bold;
+                padding:0.5em 1em;
+                font-size: 20px;           
+                border-radius: none;
+                border: none;
+                span {
+                    margin-right: 0.5em;
+                }
+                &:hover {
+                    background:black;
+                }
+            }
+        }
         a {
             display:inline-block;
             color:white;
@@ -32,12 +66,26 @@ body {
             background:black;
             border-radius: 1.5em;
             font-size: 20px;
-            margin-left: 1em;            
+            margin-left: 1em;
+            @media(max-width:$md){
+               margin-left: 0px;
+            }
+            &.top-header-contact-email {
+                @media(max-width:$xl){
+                    display:none;
+                }
+            }          
             .fa {
                 color:$primary;
                 margin-right:0.5em;
             }
         }
+    }
+    .mobile-logo-holder {        
+        @media(max-width:$md) {
+            text-align: center;
+            margin-bottom:30px;
+        }        
     }
 }
 
@@ -46,11 +94,66 @@ body {
     border-top: 1px solid $secondary-200;
     border-bottom: 1px solid $secondary-200;
 
+    #navbarNavDropdown {
+        @media(max-width:$xl) {
+            padding-top:30px;
+        }  
+    }
+
+    .mobile-menu-dropdown {
+        display:none;
+        @media(max-width:$xl){
+            display:block;
+        }
+        @media(max-width:$md){
+            display:none;
+        }
+        button {
+            color:white;
+            font-weight: bold;
+            padding:10px;           
+            border-radius: 0px;
+            border: none;
+            span {
+                margin-right: 0.5em;
+            }
+            &:hover {
+                background:black;
+            }
+        }
+    }
+
     .search-input-holder {
         border: 8px solid $primary;
         background:white;
-        padding:10px;
+        padding: 10px 0px;
         width:350px;
+        @media(max-width:$md){
+            width:100%;
+        }
+        border-radius: 15px;
+        margin-top: -30px;
+        margin-bottom: -30px;
+        display: flex;
+        align-items: center;        
+        .title {
+            font-size:22px;
+            font-weight: 300;
+            margin-right: 10px;
+            color:black;
+        }
+        input {
+            flex:1;
+            font-size:22px;
+            padding: 20px 0px;
+            border: none;
+            outline: none;
+            &::placeholder {
+                font-weight: bold;
+                color: black;
+            }
+        }
+        
     }
 
     #main-menu {
@@ -67,6 +170,17 @@ body {
                 a {
                     color:$primary; 
                 }
+            }
+            .dropdown-menu {
+                background:$secondary-300;
+                li {
+                    a {
+                        &:hover {
+                            background:black;
+                        }
+                    }
+                }
+
             }
         }
     }
