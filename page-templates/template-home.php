@@ -18,6 +18,31 @@ if ( is_front_page() ) {
 }
 ?>
 
+<div class="home-hero-banner-top">
+
+    <div class="container">
+        <div class="row align-items-end">
+            <div class="col-lg-7">
+                <div class="skip-bin-info-holder">
+                    <div class="overlay-image-arrow">
+                        <img src="<?php echo get_template_directory_uri(); ?>/img/home-hero-arrow-up.svg" alt="Arrow Up West Coast">
+                    </div>
+                    <div class="title">
+                        <i class="fa fa-arrow-circle-up"></i> Skip Bin Instant Quote
+                    </div>
+                    <div class="desc">
+                        Simply type your suburb and you will be provided an instant quote
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-1"></div>
+            <div class="col-lg-4">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/home-hero-right-info.svg" alt="West Coast Info" width="100%">
+            </div>
+        </div>
+    </div>  
+</div>
+
 
 
 <?php

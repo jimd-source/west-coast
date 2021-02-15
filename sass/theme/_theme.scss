@@ -2,6 +2,7 @@
 $primary:#FFBC00;
 $primary-500:#DFA503;
 $secondary:black;
+$secondary-500:#161616;
 $secondary-300:#3F3F3F;
 $secondary-200:#67686A;
 
@@ -15,6 +16,7 @@ body {
     font-family: 'Roboto', sans-serif;
     background:black;
     color:white;
+    min-height: 8000px;
 }
 
 
@@ -184,4 +186,37 @@ body {
             }
         }
     }
+}
+
+.home-hero-banner-top {
+    margin-top: 100px;
+    .skip-bin-info-holder {
+        border:4px dashed $primary;
+        background:$secondary-500;
+        padding: 30px;
+        border-radius: 30px;
+        position: relative;
+        .overlay-image-arrow {
+            position: absolute;
+            bottom:100%;
+            right:25%;
+            img {
+                width:135px;
+                height:146px;
+            }
+        }
+        .title {
+            font-size:48px;
+            font-weight:bold;
+            .fa {
+                color:$primary;
+            }
+        }
+        .desc {
+            font-size:24px;
+            font-weight: 300;
+            color:$primary;
+        } 
+    }
+    
 }
