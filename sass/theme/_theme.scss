@@ -251,4 +251,60 @@ body {
             }    
         }
     }
+
+    .home-hero-slider {
+        margin-top:50px;
+        border-radius:30px;
+        overflow: hidden;
+        margin-bottom:-110px;
+        position: relative;
+        z-index: 500;
+        .slide {
+            .image {
+                height: 420px;
+                background: red;
+                background-image:url(../img/slider-1.png);                
+                background-size: cover;
+                background-position: center;
+                
+            }
+            .entry-content {
+                background:white;
+                height: 110px;
+                color:black;
+                font-size: 30px;
+                font-weight: bold;
+                display: flex;
+                line-height: 1.15;
+                align-items: center;
+                padding-bottom: 5px;
+                .icon {                                        
+                    padding-left: 30px;
+                    padding-right: 30px;
+                }
+                .info {
+
+                }
+                .slider-nav {
+                    display: flex;
+                    margin-right: 30px;
+                    a {
+                        margin-left: 0.25em;
+                        margin-right: 0.25em;
+                        font-size: 48px;
+                        color:$primary;
+                        display:inline-block;
+                    }
+                }
+            }
+            
+        }
+    }
+}
+
+.home-product-info {
+    height:1000px;
+    background:$primary;
+    padding-top:200px;
+
 }
